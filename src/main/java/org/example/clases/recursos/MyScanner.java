@@ -1,4 +1,5 @@
-package org.example;
+package org.example.clases.recursos;
+
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -109,4 +110,3 @@ public class MyScanner {
     }
 
 }
-

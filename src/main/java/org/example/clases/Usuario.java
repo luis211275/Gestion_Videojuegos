@@ -10,6 +10,7 @@ public class Usuario {
     private String apellido;
     private String email;
     private String suscripcion;
+    private int numPartidas;
 
     /**
      * Constructor principal de la clase usuario
@@ -19,11 +20,12 @@ public class Usuario {
      * @param email establece el email del usuario
      * @param suscripcion establece la suscripcion del usuario
      */
-    public Usuario(String nombre, String apellido, String email, String suscripcion) {
+    public Usuario(String nombre, String apellido, String email, String suscripcion, int numPartidas) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
         this.suscripcion = suscripcion;
+        this.numPartidas = numPartidas;
     }
 
     /**
@@ -99,6 +101,13 @@ public class Usuario {
         this.suscripcion = suscripcion;
     }
 
+    public int getNumPartidas() {
+        return numPartidas;
+    }
+
+    public void setNumPartidas(int numPartidas) {
+        this.numPartidas = numPartidas;
+    }
 
     /**
      * Metodos para mostrar los datos del usuario
@@ -112,6 +121,7 @@ public class Usuario {
                 ", apellido='" + apellido + '\'' +
                 ", email='" + email + '\'' +
                 ", suscripcion='" + suscripcion + '\'' +
+                ", numPartidas='" + numPartidas + '\'' +
                 '}';
     }
 }

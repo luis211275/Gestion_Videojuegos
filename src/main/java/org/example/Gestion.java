@@ -5,66 +5,97 @@ import org.example.clases.Videojuego;
 import org.example.clases.enums.Genero;
 import org.example.clases.recursos.MyScanner;
 import org.example.clases.recursos.Utilidades;
+import org.example.exceptions.InvalidSpeedException;
+import org.example.exceptions.InvalidUserException;
+import org.example.exceptions.InvalidVideogamesException;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Gestion {
 
-    private static final MyScanner sc = new MyScanner();
     private static ArrayList<Videojuego> videojuegos = new ArrayList<>();
     private static ArrayList<Usuario> usuarios = new ArrayList<>();
 
 
     /**
-     * Metodo para añadir el videojuego a la lista
+     * metodo para añadir un videojuego a la lista
+     *
+     * @param videojuego creacion de un videojuego con sus datos
      */
-    public static void añadirVideojuego(){
-        String nombre = sc.pideTexto("Introduzca el nombre del videojuego: ");
-        Genero genero = Utilidades.pedirEnum(Genero.class, "Introduzca el genero del videojuego: ");
-        int velocidad_min = sc.pedirNumero("Introduzca el velocidad minima que necesita el videojuego: ");
-        Videojuego videojuego = new Videojuego(nombre, genero, velocidad_min);
-        videojuegos.add(videojuego);
-        System.out.println("Videojuego registrado con exito");
+    public void añadirVideojuego(Videojuego videojuego) {
+        if (videojuego != null) {
+            videojuegos.add(videojuego);
+        }
+
     }
 
-    /**
-     * Metodo para mostrar los videojuegos registrados en la lista
-     */
-    public static void mostrarVideojuego(){
-        for (Videojuego videojuego : videojuegos){
-            System.out.println("Nombre del videojuego: " + videojuego.getNombre());
-        }
-    }
 
     /**
      * Metodo para buscar el videojuego en la lista
+     *
      * @param nombre establece el titulo del videojuego
      */
-    public static void buscarVideojuego(String nombre){
-        for (Videojuego videojuego : videojuegos){
-            if (videojuego.getNombre().equals(nombre)){
-                System.out.println("El videojuego introducido: "+videojuego+" esta registrado");
+    public Videojuego buscarVideojuego(String nombre) {
+        for (Videojuego videojuego : videojuegos) {
+            if (videojuego.getNombre().equals(nombre)) {
+                return videojuego;
             }
+        }
+        return null;
+    }
+
+
+    /**
+     * metodo para ver todos los videojuegos registrados
+     *
+     * @return todos los videojuegos registrados
+     */
+    public List<Videojuego> verVideojuegos() {
+        return videojuegos;
+    }
+
+
+    /**
+     * metodo para registrar los usuarios y meterlos en la lista
+     *
+     * @param usuario creacion de usuario con sus datos
+     */
+
+    public void registrarUsuario(Usuario usuario) {
+        if (usuario != null) {
+            usuarios.add(usuario);
         }
     }
 
 
     /**
      * Metodo para buscar el usuario en la lista
-     * @param nombre establece el nombre del usuario registrado
+     *
+     * @param correo establece el nombre del usuario registrado
      */
-    public static void buscarUsuario(String nombre){
-        for (Usuario usuario: usuarios){
-            if (usuario.getNombre().equals(nombre)){
-                System.out.println("El usuario introducido: "+usuario+" esta registrado");
+    public Usuario buscarUsuario(String correo) {
+        for (Usuario usuario : usuarios) {
+            if (usuario.getEmail().equalsIgnoreCase(correo)) {
+                return usuario;
             }
         }
+        return null;
     }
 
-
-
-
-
+    /**
+     * metodo para ver todos los usuarios registrados
+     *
+     * @return lista de todos los usuarios
+     */
+    public List<Usuario> verUsuarios() {
+        return usuarios;
+    }
 
 }
+
+
+
+
+
 

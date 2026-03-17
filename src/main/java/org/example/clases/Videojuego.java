@@ -8,20 +8,20 @@ import org.example.clases.enums.Genero;
  */
 public class Videojuego {
     private String nombre;
-    Genero genero;
-    private int velocidad_min;
+    private Genero genero;
+    private int velocidadMin;
 
     /**
      * Constructor principal de la clase Libro
      *
       * @param nombre establece el nombre del videojuego
      * @param genero establece el genero del videojuego
-     * @param velocidad_min establece la velocidad minima del videojuego
+     * @param velocidadMin establece la velocidad minima del videojuego
      */
-    public Videojuego(String nombre, Genero genero, int velocidad_min) {
+    public Videojuego(String nombre, Genero genero, int velocidadMin) {
         this.nombre = nombre;
         this.genero = genero;
-        this.velocidad_min = velocidad_min;
+        this.velocidadMin = velocidadMin;
     }
 
     /**
@@ -66,17 +66,17 @@ public class Videojuego {
      * @return la velocidad minima del videojuego
      */
     public int getVelocidad_min() {
-        return velocidad_min;
+        return velocidadMin;
     }
 
     /**
      * Setter del atributo velocidad_minima
      *
-     * @param velocidad_min establece3 la velocidad_minima del videojuego
+     * @param velocidadMin establece3 la velocidad_minima del videojuego
      */
 
-    public void setVelocidad_min(int velocidad_min) {
-        this.velocidad_min = velocidad_min;
+    public void setVelocidad_min(int velocidadMin) {
+        this.velocidadMin = velocidadMin;
     }
 
     /**
@@ -90,7 +90,7 @@ public class Videojuego {
         return "Videojuego{" +
                 "nombre='" + nombre + '\'' +
                 ", genero=" + genero +
-                ", velocidad_min=" + velocidad_min +
+                ", velocidad_min=" + velocidadMin +
                 '}';
     }
 }

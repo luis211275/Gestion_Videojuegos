@@ -8,24 +8,25 @@ package org.example.clases;
 public class Usuario {
     private String nombre;
     private String apellido;
-    private String email;
-    private String suscripcion;
-    private int numPartidas;
+    private String correo;
+    private Suscripcion suscripcion;
+    private int partidasActivas;
 
     /**
      * Constructor principal de la clase usuario
      *
      * @param nombre establece el nombre del usuario
      * @param apellido establece el apellido del usuario
-     * @param email establece el email del usuario
+     * @param correo establece el email del usuario
      * @param suscripcion establece la suscripcion del usuario
      */
-    public Usuario(String nombre, String apellido, String email, String suscripcion, int numPartidas) {
+
+    public Usuario(String nombre, String apellido, String correo, Suscripcion suscripcion, int partidasActivas) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.email = email;
+        this.correo = correo;
         this.suscripcion = suscripcion;
-        this.numPartidas = numPartidas;
+        this.partidasActivas = 0;
     }
 
     /**
@@ -70,16 +71,16 @@ public class Usuario {
      * @return el email del usuario
      */
     public String getEmail() {
-        return email;
+        return correo;
     }
 
     /**
      * Setter del atributo email
      *
-     * @param email establece el email del usuario
+     * @param correo establece el email del usuario
      */
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmail(String correo) {
+        this.correo = correo;
     }
 
     /**
@@ -88,7 +89,7 @@ public class Usuario {
      * @return la suscripcion del usuario
      */
 
-    public String getSuscripcion() {
+    public Suscripcion getSuscripcion() {
         return suscripcion;
     }
 
@@ -97,16 +98,16 @@ public class Usuario {
      *
      * @param suscripcion establece la suscripcion del usuario
      */
-    public void setSuscripcion(String suscripcion) {
+    public void setSuscripcion(Suscripcion suscripcion) {
         this.suscripcion = suscripcion;
     }
 
     public int getNumPartidas() {
-        return numPartidas;
+        return partidasActivas;
     }
 
-    public void setNumPartidas(int numPartidas) {
-        this.numPartidas = numPartidas;
+    public void setNumPartidas(int partidasActivas) {
+        this.partidasActivas = partidasActivas;
     }
 
     /**
@@ -119,9 +120,9 @@ public class Usuario {
         return "Usuario{" +
                 "nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
-                ", email='" + email + '\'' +
+                ", email='" + correo + '\'' +
                 ", suscripcion='" + suscripcion + '\'' +
-                ", numPartidas='" + numPartidas + '\'' +
+                ", numPartidas='" + partidasActivas + '\'' +
                 '}';
     }
 }

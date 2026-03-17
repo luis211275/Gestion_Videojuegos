@@ -7,7 +7,7 @@ import java.util.List;
  * @author Alumno: Luis López-Nuño Sánchez
  * @version 1.0
  */
-public class Suscripcion {
+public abstract class Suscripcion {
     protected String nombre;
     protected int velocidad_max;
     protected int num_partidas;

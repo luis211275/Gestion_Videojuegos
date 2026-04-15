@@ -5,6 +5,9 @@ import java.util.Arrays;
 
 import java.util.Arrays;
 
+/**
+ * Clase premium que extiende de suscripcion
+ */
 public class Premium extends Suscripcion {
 
     public Premium() {
@@ -12,23 +15,3 @@ public class Premium extends Suscripcion {
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

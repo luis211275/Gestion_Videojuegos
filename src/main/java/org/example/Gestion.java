@@ -112,7 +112,7 @@ public class Gestion {
 
 
         if (!plan.getCatalogo().contains(videojuego.getNombre())) {
-            throw new InvalidVideogamesException("El juego '" + videojuego.getNombre() + "' no está incluido en su catálogo actual.");
+            throw new InvalidVideogamesException("El juego '" + videojuego.getNombre() + "' no está incluido en el catalogo que tiene.");
         }
 
 

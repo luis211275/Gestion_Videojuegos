@@ -1,5 +1,9 @@
 package org.example;
-
+/**
+ * clase Main
+ * @Author: Luis López-Nuño
+ * version: 1.0
+ */
 
 import org.example.clases.Basic;
 import org.example.clases.Suscripcion;
@@ -11,6 +15,9 @@ import org.example.exceptions.InvalidSpeedException;
 import org.example.exceptions.InvalidUserException;
 import org.example.exceptions.InvalidVideogamesException;
 
+/**
+ *  Clase de ejecucion del programa
+ */
 public class Main {
 public static void main(String[] args) throws InvalidSpeedException, InvalidVideogamesException, InvalidUserException {
 
